@@ -1,0 +1,284 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background-color: #4b6574;
+}
+
+/* TOPBAR */
+
+.topbar {
+    background-color: #dcd8d3;
+    height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 25px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.left-section {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.hamburger {
+    font-size: 26px;
+    cursor: pointer;
+}
+
+.logo {
+    width: 90px;
+}
+
+.left-section h2 {
+    font-size: 18px;
+}
+
+.right-section {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.btn-primary {
+    background-color: #7e8f58;
+    border: none;
+    padding: 8px 20px;
+    border-radius: 20px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.btn-primary:hover {
+    background-color: #6d7c4a;
+}
+
+.user-info {
+    text-align: center;
+    font-size: 12px;
+}
+
+.user-info img{
+   text-align: center;
+    font-size: 12px;
+}
+
+.user-info img {
+    width: 40px;
+    display: block;
+    margin: 0 auto 3px;
+}
+
+/* SIDEBAR */
+
+.sidebar {
+    position: fixed;
+    top: 70px;
+    left: 0;
+    width: 240px;
+    height: calc(100vh - 70px);
+    background-color: #dcd8d3;
+    padding: 20px;
+    transition: transform 0.3s ease;
+}
+
+.sidebar.collapsed {
+    transform: translateX(-100%);
+}
+
+.sidebar nav {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.sidebar a {
+    background-color: #7e8f58;
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 8px;
+    text-align: center;
+    font-size: 14px;
+}
+
+/* CONTENIDO PRINCIPAL */
+
+.main-content {
+    margin-top: 70px;
+    margin-left: 240px;
+    padding: 30px;
+    transition: margin-left 0.3s ease;
+}
+
+.main-content.expanded {
+    margin-left: 0;
+}
+
+/* CARDS */
+
+.cards {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 25px;
+}
+
+.card {
+    flex: 1;
+    background-color: #dcd8d3;
+    padding: 25px;
+    border-radius: 12px;
+    text-align: center;
+}
+
+.card h3 {
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.card p {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+/* BUSCADOR */
+
+.search-section {
+    display: flex;
+    gap: 15px;
+}
+
+.search-section input {
+    flex: 1;
+    padding: 10px;
+    border-radius: 20px;
+    border: none;
+}
+
+.btn-secondary {
+    background-color: #7e8f58;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    color: white;
+    cursor: pointer;
+}
+
+.btn-secondary:hover {
+    background-color: #6d7c4a;
+}
+
+.search-box {
+    position: relative;
+    flex: 1;
+}
+
+.search-box input {
+    width: 100%;
+    padding: 10px 15px 10px 40px; /* espacio para icono */
+    border-radius: 20px;
+    border: none;
+    outline: none;
+}
+
+.search-icon {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 16px;
+    opacity: 0.6;
+}
+/* MODALES */
+
+.modal-overlay {
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0,0,0,0.4);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 2000;
+}
+
+.modal-overlay.active {
+    display: flex;
+}
+
+.modal {
+    background-color: #dcd8d3;
+    padding: 25px;
+    border-radius: 12px;
+    width: 350px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.modal.small {
+    width: 300px;
+    text-align: center;
+}
+
+.modal input,
+.modal textarea {
+    padding: 8px;
+    border-radius: 8px;
+    border: none;
+}
+
+.modal-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.btn-save {
+    background-color: #7e8f58;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 20px;
+    color: white;
+    cursor: pointer;
+}
+
+.btn-save:hover {
+    background-color: #6d7c4a;
+}
+
+.btn-cancel {
+    background-color: #b05b5b;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 20px;
+    color: white;
+    cursor: pointer;
+}
+
+.btn-cancel:hover {
+    background-color: #944646;
+}
+
+/* ALERTA INTERNA */
+
+.alert-success {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #7e8f58;
+    color: white;
+    padding: 15px 25px;
+    border-radius: 10px;
+    display: none;
+    z-index: 3000;
+}

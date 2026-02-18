@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<header class="topbar">
+
+    <div class="left-section">
+        <div class="hamburger" id="menuToggle">☰</div>
+        <img src="icons/logo.png" alt="Logo" class="logo">
+        <h2>Bienvenida Sra Olga.</h2>
+    </div>
+
+    <div class="right-section">
+        <button class="btn-primary">+ Registrar Ventas</button>
+        <div class="user-info">
+            <img src="icons/icon_usuario.png" alt="Usuario">
+            <span>Administrador</span>
+        </div>
+    </div>
+
+</header>
+
+<!-- SIDEBAR -->
+<aside class="sidebar" id="sidebar">
+    <nav>
+        <a href="#">Inicio</a>
+        <a href="#">Catálogo de productos</a>
+        <a href="#">Movimientos</a>
+        <a href="#">Proveedores</a>
+        <a href="#">Reportes</a>
+    </nav>
+</aside>
+
+<!-- CONTENIDO PRINCIPAL -->
+<main class="main-content" id="mainContent">
+
+    <!-- CARDS -->
+    <section class="cards">
+        <div class="card">
+            <h3>PRODUCTOS</h3>
+            <p>52</p>
+        </div>
+
+        <div class="card">
+            <h3>UNIDADES</h3>
+            <p>27275</p>
+        </div>
+
+        <div class="card">
+            <h3>VALOR TOTAL</h3>
+            <p>$14.706.554</p>
+        </div>
+    </section>
+
+    <!-- BUSCADOR -->
+    <section class="search-section">
+
+    <div class="search-box">
+        <span class="search-icon">🔍</span>
+        <input type="text" placeholder="Buscar productos">
+    </div>
+
+    <button class="btn-secondary">Categorias</button>
+
+</section>
+
+<!-- MODAL REGISTRAR VENTA -->
+<div class="modal-overlay" id="saleModal">
+    <div class="modal">
+
+        <h3>Registrar Venta</h3>
+
+        <label>Fecha</label>
+        <input type="date" id="saleDate">
+
+        <label>Observaciones</label>
+        <textarea id="saleObs" rows="3"></textarea>
+
+        <label>Id_Producto</label>
+        <input type="number" id="saleIdProducto">
+
+        <div class="modal-buttons">
+            <button class="btn-save" id="saveSale">Guardar</button>
+            <button class="btn-cancel" id="cancelSale">Cancelar</button>
+        </div>
+
+    </div>
+</div>
+
+<!-- MODAL CONFIRMACION -->
+<div class="modal-overlay" id="confirmModal">
+    <div class="modal small">
+        <p>¿Estás seguro que deseas cancelar?</p>
+        <div class="modal-buttons">
+            <button class="btn-save" id="confirmYes">Sí</button>
+            <button class="btn-cancel" id="confirmNo">No</button>
+        </div>
+    </div>
+</div>
+
+<!-- ALERTA INTERNA -->
+<div class="alert-success" id="successAlert">
+    Venta guardada con éxito
+</div>
+
+
+</main>
+
+<script src="js/index.js"></script>
+</body>
+</html>
